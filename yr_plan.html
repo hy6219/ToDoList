@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연간계획</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js">
+
+    </script>
+    <script>
+
+        function add(){
+            var str=null;
+            str=$('#txt').val();
+            $("#year").text(str);
+            console.log(str);
+        }
+    </script>
+</head>
+<style>
+    body{
+        margin:0;
+    }
+    .yr_dream img{
+        position:absolute;
+        left:30%;
+        align-content: center;
+    }
+    .yr_dream h1{
+        position:absolute;
+        top:20%;
+        font-size:50px;
+        color:blueviolet;
+        left:20%;
+    }
+    .yr_plan_content{
+        position:absolute;
+        padding-left:10px;
+        top:80%;
+    }
+    .yr_plan_content h2{
+
+        font-size:35px;
+        color:darkgreen;
+
+    }
+
+    .yr_plan_content textarea{
+
+        width:1000px;
+        height:100px;
+        border:2px dashed indigo;
+        background:lawngreen;
+        padding:5px;
+        font-size:20px;
+        color:midnightblue;
+        font-weight:bold;
+    }
+    #year{
+        color:midnightblue;
+    }
+</style>
+<body>
+    <header class="yr_dream">
+        <img src="dream.jpg">
+        <h1>YEAR PLAN</h1>
+    </header>
+    <article class="yr_plan_content">
+        <label>
+            <h2>
+                연간계획 추가
+            </h2>
+        </label>
+        <textarea id="txt">
+
+        </textarea>
+        <button id="submit" onclick=add()>추가하기</button>
+        <h3 id="year"></h3>
+    </article>
+</body>
+</html>
